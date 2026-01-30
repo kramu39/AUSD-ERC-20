@@ -1,6 +1,6 @@
 # Compiler files
 cache/
-out/
+
 
 # Ignores development broadcast logs
 !/broadcast
@@ -14,3 +14,4 @@ docs/
 .env
 .sh
 commit-ausd-base.sh
+.env
