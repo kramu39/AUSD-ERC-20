@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "forge-std/Script.sol";
 import "../src/AUSD.sol";
+import "forge-std/Script.sol";
 
 contract DeployAUSD is Script {
     function run() external {
-        uint256 deployerKey = vm.envUint("PRIVATE_KEY");
+        uint256 deployerKey = vm.envUint("PRIVATE_KEY"); // <-- reads from .env
 
         vm.startBroadcast(deployerKey);
 
