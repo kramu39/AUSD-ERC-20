@@ -12,3 +12,5 @@ docs/
 
 # Dotenv file
 .env
+.sh
+commit-ausd-base.sh
