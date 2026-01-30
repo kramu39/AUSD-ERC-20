@@ -5,9 +5,9 @@ import "openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 import "openzeppelin-contracts/contracts/access/Ownable.sol";
 
 contract AUSD is ERC20, Ownable {
-    uint256 public constant MAX_SUPPLY = 1_000_000_000 ether; // 1B AUSD
+    uint256 public constant MAX_SUPPLY = 1000000000000 ether;
 
-    constructor(uint256 initialSupply) ERC20("AUSD Stable Token", "AUSD") {
+    constructor(uint256 initialSupply) ERC20("AUSD Stable Token", "AUSD") Ownable(msg.sender) {
         require(initialSupply <= MAX_SUPPLY, "Max supply exceeded");
         _mint(msg.sender, initialSupply);
     }
